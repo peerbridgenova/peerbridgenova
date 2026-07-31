@@ -1,105 +1,251 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About | PeerBridge</title>
-    <meta name="description" content="Learn about PeerBridge, a student-led mental health initiative serving NoVA students through community, conversation, and care.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="site-header">
-        <a class="brand" href="index.html">
-          <img src="assets/img/peerbridge-logo.png" alt="PeerBridge logo">
-          <div>
-            <span class="brand-name">PeerBridge</span>
-            <span class="brand-tag">Where mental health and technology meet</span>
-          </div>
-        </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav id="site-nav" class="site-nav">
-          <a href="index.html">Home</a>
-          <a class="active" href="about.html">About</a>
-          <a href="articles.html">Articles</a>
-          <a href="team.html">Team</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </header>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Mission | PeerBridge</title>
+<meta name="description" content="Why PeerBridge exists: making mental health support in Northern Virginia visible, understandable, and reachable for students.">
+<meta property="og:title" content="Our Mission | PeerBridge">
+<meta property="og:description" content="Why PeerBridge exists: making mental health support in Northern Virginia visible, understandable, and reachable for students.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#eaf5f9">
+<link rel="icon" href="assets/img/peerbridge-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
 
-      <main class="page-main">
-        <section class="page-hero">
-          <p class="eyebrow">About PeerBridge</p>
-          <h1>A student-led initiative working to make support more visible, accessible, and community-centered.</h1>
-          <p class="lead">PeerBridge exists to help mental health support feel clearer, more approachable, and more connected to the everyday student experience in NoVA.</p>
-        </section>
+<div class="announce">
+  <div class="wrap">
+    <span>Student-led mental health support in Northern Virginia</span>
+    <a href="https://www.instagram.com/peerbridgenova/" target="_blank" rel="noopener">Follow @peerbridgenova</a>
+  </div>
+</div>
 
-        <section class="section split-section">
-          <div class="split-copy">
-            <h2>Why we started</h2>
-            <p>
-              Students manage stress, pressure, and uncertainty every day, often without enough visible support.
-              PeerBridge was created to make those conversations feel less isolating and to help students find community without shame.
-            </p>
-            <p>
-              We want support to feel easier to reach, more grounded in real student needs, and more present in everyday campus life.
-            </p>
-          </div>
-          <div class="info-stack">
-            <div class="stack-card">
-              <h3>Mission</h3>
-              <p>Make mental health support accessible and inclusive.</p>
-            </div>
-            <div class="stack-card">
-              <h3>Vision</h3>
-              <p>A campus culture where asking for support feels normal and community-driven.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-heading">
-            <p class="eyebrow">Our values</p>
-            <h2>Principles that shape how we build community.</h2>
-          </div>
-          <div class="card-grid three-up">
-            <article class="feature-card">
-              <div class="feature-icon">Care</div>
-              <p>We lead with empathy and make space for people to be honest about what they are carrying.</p>
-            </article>
-            <article class="feature-card">
-              <div class="feature-icon">Access</div>
-              <p>We believe support should feel reachable, understandable, and welcoming to more students.</p>
-            </article>
-            <article class="feature-card">
-              <div class="feature-icon">Community</div>
-              <p>We create spaces where students feel less alone and more connected to each other.</p>
-            </article>
-          </div>
-        </section>
-      </main>
-
-      <footer class="site-footer">
-        <div>
-          <span class="brand-name">PeerBridge</span>
-          <p>Student-led mental health support for the NoVA community.</p>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/img/peerbridge-logo.png" alt="">
+      <span>
+        <span class="brand-name">PeerBridge</span>
+        <span class="brand-tag">Mental health &amp; community</span>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <div class="nav-item"><a class="nav-link" href="index.html">Home</a></div>
+      <div class="nav-item">
+        <button class="nav-link current" type="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></button>
+        <div class="dropdown">
+          <a href="about.html">Our Mission<small>Why PeerBridge exists</small></a>
+          <a href="team.html">Our Team<small>The students behind it</small></a>
         </div>
-        <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="articles.html">Articles</a>
-          <a href="team.html">Team</a>
-          <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-item">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">Resources<span class="caret"></span></button>
+        <div class="dropdown">
+          <a href="articles.html">Articles<small>Reading on student wellbeing</small></a>
+          <a href="glossary.html">Glossary<small>Mental health terms, explained</small></a>
         </div>
-        <p class="footer-note">© <span id="year"></span> PeerBridge. Built with care.</p>
-      </footer>
+      </div>
+      <div class="nav-item">
+        <button class="nav-link" type="button" aria-haspopup="true" aria-expanded="false">Get Involved<span class="caret"></span></button>
+        <div class="dropdown">
+          <a href="get-involved.html">Join the Team<small>Open and upcoming roles</small></a>
+          <a href="stories.html">Share Your Story<small>Tell us what you've lived</small></a>
+          <a href="contact.html">Contact Us<small>Questions and collaboration</small></a>
+        </div>
+      </div>
+      <a class="btn btn-gold nav-cta" href="donate.html">Support Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="page-head">
+  <div class="blobs" aria-hidden="true"><span class="blob blob-a"></span><span class="blob blob-b"></span><span class="blob blob-c"></span></div>
+  <div class="wrap">
+    <p class="crumbs"><a href="index.html">Home</a><span>/</span>About<span>/</span>Our Mission</p>
+    <div class="split wide-left">
+      <div>
+        <span class="kicker">Our mission</span>
+        <h1>Closing the distance between struggling and getting help.</h1>
+        <p class="lead wide">Knowing you need support and knowing how to get it are two completely different problems &mdash; and almost nobody helps students with the second one.</p>
+      </div>
+      <div class="illus illus-plain"><svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Overlapping circles representing community">
+  <rect width="520" height="400" fill="#eaf5f9"/>
+  <circle cx="190" cy="160" r="118" fill="#1198b8" opacity=".22"/>
+  <circle cx="330" cy="160" r="118" fill="#d4b14d" opacity=".28"/>
+  <circle cx="260" cy="266" r="118" fill="#0c6d86" opacity=".20"/>
+  <circle cx="260" cy="196" r="46" fill="#ffffff"/>
+  <path d="M240 226a20 24 0 0 1 40 0z" fill="#0c6d86"/><circle cx="260" cy="192" r="13" fill="#0c6d86"/>
+  <circle cx="86" cy="72" r="9" fill="#d4b14d" opacity=".6"/>
+  <circle cx="452" cy="330" r="12" fill="#1198b8" opacity=".35"/>
+  <circle cx="60" cy="326" r="6" fill="#1198b8" opacity=".4"/>
+  <circle cx="436" cy="66" r="6" fill="#0c6d86" opacity=".35"/>
+</svg></div>
     </div>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  <div class="curve curve-bottom" aria-hidden="true"><svg viewBox="0 0 1440 88" preserveAspectRatio="none"><path d="M0 88C240 24 480 24 720 56s480 32 720-8V88z" fill="#ffffff"/></svg></div>
+</section>
+
+<section class="band bg-white">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <span class="kicker">Why we started</span>
+        <h2>The information exists. The path to it doesn't.</h2>
+        <p>Every school has a counselor. Every district has a resource page. Most students still have no idea what to do when a friend says something that scares them, or when they themselves stop sleeping in October and don't start again until March.</p>
+        <p>The problem isn't a shortage of services. It's that the route to them is invisible, intimidating, and written in a language nobody speaks. So people wait &mdash; often until things get much worse than they needed to.</p>
+        <p>PeerBridge was built to be the missing step in between: the peer who says the honest thing first, explains what the words mean, and walks alongside you toward the person who's actually trained to help.</p>
+      </div>
+      <div class="illus illus-plain"><svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stacked cards of resources">
+  <rect width="520" height="400" fill="#eaf5f9"/>
+  <circle cx="452" cy="86" r="58" fill="#f8edd2"/>
+  <rect x="118" y="96" width="290" height="200" rx="26" fill="#d8ecf3" transform="rotate(-7 263 196)"/>
+  <rect x="126" y="104" width="290" height="200" rx="26" fill="#ffffff" transform="rotate(3 271 204)"/>
+  <rect x="158" y="140" width="164" height="15" rx="7.5" fill="#0c6d86" opacity=".8" transform="rotate(3 240 147)"/>
+  <rect x="156" y="178" width="222" height="12" rx="6" fill="#d8ecf3" transform="rotate(3 267 184)"/>
+  <rect x="158" y="208" width="200" height="12" rx="6" fill="#d8ecf3" transform="rotate(3 258 214)"/>
+  <rect x="160" y="238" width="112" height="12" rx="6" fill="#d4b14d" opacity=".55" transform="rotate(3 216 244)"/>
+  <circle cx="86" cy="322" r="40" fill="#1198b8" opacity=".18"/>
+  <circle cx="446" cy="320" r="16" fill="#d4b14d" opacity=".45"/>
+</svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="band bg-sky">
+  <div class="wrap">
+    <div class="grid g2">
+      <div class="quote">
+        <span class="kicker">Mission</span>
+        <p class="statement">Make mental health support in Northern Virginia visible, understandable, and genuinely reachable for every student who needs it.</p>
+      </div>
+      <div class="quote">
+        <span class="kicker">Vision</span>
+        <p class="statement">A school culture where asking for help is as unremarkable as asking for notes from a class you missed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band bg-white">
+  <div class="wrap">
+    <div class="center" style="margin-bottom:2.6rem;">
+      <span class="kicker">How we work</span>
+      <h2 class="narrow center">Four commitments we hold ourselves to</h2>
+    </div>
+    <div class="grid g4">
+      <div class="card card-cream"><div class="card-num">01</div><h3>Peers, not experts</h3><p>We're students. We're clear about what we're not qualified to do, and we refer out early rather than late.</p></div>
+      <div class="card card-cream"><div class="card-num">02</div><h3>Plain language</h3><p>If a resource needs a clinical vocabulary to understand, it isn't accessible. So we translate it.</p></div>
+      <div class="card card-cream"><div class="card-num">03</div><h3>No performance</h3><p>Awareness that stops at a coloured ribbon isn't awareness. We'd rather do one useful thing than ten visible ones.</p></div>
+      <div class="card card-cream"><div class="card-num">04</div><h3>Built to outlast us</h3><p>We're documenting how this works so PeerBridge survives its founders graduating.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band bg-cream">
+  <div class="wrap">
+    <div class="split flip">
+      <div>
+        <span class="kicker">Where we are now</span>
+        <h2>Honestly: early</h2>
+        <p class="lead">PeerBridge is in its first year. We have a small founding team, a growing set of resources, and a clear plan &mdash; not a track record yet. We'd rather say that plainly than inflate what we've done.</p>
+        <p>Practically, that means we're focused on building the resource library, running our first events, and getting the structure right before we expand. If you want to be part of the version of this that comes next, <a class="arrow" href="get-involved.html">that page is for you</a>.</p>
+      </div>
+      <div class="illus illus-plain"><svg viewBox="0 0 520 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A growing team">
+  <rect width="520" height="400" fill="#eaf5f9"/>
+  <circle cx="260" cy="230" r="150" fill="#ffffff" opacity=".7"/>
+  <path d="M110 250a150 150 0 0 1 300 0" fill="none" stroke="#d4b14d" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+  <path d="M150 250a110 110 0 0 1 220 0" fill="none" stroke="#1198b8" stroke-width="8" stroke-linecap="round" opacity=".4"/>
+  <path d="M130 320a20 24 0 0 1 40 0z" fill="#0c6d86"/><circle cx="150" cy="286" r="13" fill="#0c6d86"/>
+  <path d="M240 320a20 24 0 0 1 40 0z" fill="#1198b8"/><circle cx="260" cy="286" r="13" fill="#1198b8"/>
+  <path d="M350 320a20 24 0 0 1 40 0z" fill="#0c6d86"/><circle cx="370" cy="286" r="13" fill="#0c6d86"/>
+  <circle cx="205" cy="292" r="16" fill="#f8edd2" stroke="#d4b14d" stroke-width="3" stroke-dasharray="5 5"/>
+  <circle cx="315" cy="292" r="16" fill="#f8edd2" stroke="#d4b14d" stroke-width="3" stroke-dasharray="5 5"/>
+  <circle cx="96" cy="98" r="8" fill="#d4b14d" opacity=".6"/>
+  <circle cx="430" cy="112" r="12" fill="#1198b8" opacity=".3"/>
+</svg></div>
+    </div>
+  </div>
+</section>
+
+<section class="band bg-deep on-deep">
+  <div class="blobs" aria-hidden="true"><span class="blob blob-a"></span><span class="blob blob-b"></span><span class="blob blob-c"></span></div>
+  <div class="wrap center">
+    <h2 class="narrow center">Want to work with us?</h2>
+    <p class="lead wide">Schools, counselors, student groups, and local organizations &mdash; we're actively looking for partners.</p>
+    <div class="btn-row"><a class="btn btn-on-deep" href="contact.html">Start a conversation</a></div>
+  </div>
+</section>
+</main>
+
+<div class="crisis">
+  <div class="wrap">
+    <div class="inner">
+      <svg class="heart" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <circle cx="22" cy="22" r="22" fill="#f8edd2"/>
+  <path d="M22 32c-9-6-13-10-13-15a7 7 0 0 1 13-2 7 7 0 0 1 13 2c0 5-4 9-13 15z" fill="#d4b14d"/>
+</svg>
+      <p><strong>If you need help right now, you don't have to wait.</strong> Call or text <a href="tel:988">988</a> for the Suicide &amp; Crisis Lifeline, or text <strong>HOME</strong> to <a href="sms:741741">741741</a>. Both are free and staffed around the clock. In an emergency, call 911.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="brand-name">PeerBridge</span>
+        <span class="brand-tag">Mental health &amp; community</span>
+        <p class="footer-blurb">A student-led initiative working to make mental health support in Northern Virginia easier to find, easier to talk about, and easier to reach.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Mission</a></li>
+          <li><a href="team.html">Our Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="articles.html">Articles</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="stories.html">Stories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <ul>
+          <li><a href="get-involved.html">Join the Team</a></li>
+          <li><a href="donate.html">Support Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span class="js-year">2026</span> PeerBridge &middot; a student organization, not a clinical or emergency service.</span>
+      <div class="social">
+        <a href="https://www.instagram.com/peerbridgenova/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 3.08A6.76 6.76 0 1 0 18.76 12 6.76 6.76 0 0 0 12 5.24zm0 11.15A4.39 4.39 0 1 1 16.39 12 4.39 4.39 0 0 1 12 16.39zm8.6-11.42a1.58 1.58 0 1 1-1.58-1.58 1.58 1.58 0 0 1 1.58 1.58z"/></svg>
+        </a>
+        <a href="mailto:peerbridgenova@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 4.76-8-4.76V6l8 4.76L20 6z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
