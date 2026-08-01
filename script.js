@@ -24,51 +24,96 @@
 
   var items = Array.prototype.slice.call(document.querySelectorAll(".nav-item"));
 
+  // How long the menu stays open after the pointer leaves. Without this,
+  // any wobble on the way down to the links snaps it shut.
+  var CLOSE_DELAY = 260;
+
+  function isDesktop() {
+    return window.innerWidth > 940 && window.matchMedia("(hover: hover)").matches;
+  }
+
+  function setOpen(item, open) {
+    var btn = item.querySelector(".nav-link[aria-haspopup]");
+    item.classList.toggle("open", open);
+    if (btn) btn.setAttribute("aria-expanded", String(open));
+    if (!open) item._via = null;
+  }
+
+  function closeAll(except) {
+    items.forEach(function (o) {
+      if (o === except) return;
+      clearTimeout(o._t);
+      setOpen(o, false);
+    });
+  }
+
   items.forEach(function (item) {
     var btn = item.querySelector(".nav-link[aria-haspopup]");
     if (!btn) return;
 
+    item._t = null;    // pending close timer
+    item._via = null;  // "hover" or "click" — how it was opened
+
+    function open(via) {
+      clearTimeout(item._t);
+      closeAll(item);
+      setOpen(item, true);
+      item._via = via;
+    }
+
+    function scheduleClose() {
+      clearTimeout(item._t);
+      item._t = setTimeout(function () { setOpen(item, false); }, CLOSE_DELAY);
+    }
+
     btn.addEventListener("click", function (e) {
       e.preventDefault();
       e.stopPropagation();
-      var wasOpen = item.classList.contains("open");
-      items.forEach(function (o) {
-        o.classList.remove("open");
-        var b = o.querySelector(".nav-link[aria-haspopup]");
-        if (b) b.setAttribute("aria-expanded", "false");
-      });
-      if (!wasOpen) {
-        item.classList.add("open");
-        btn.setAttribute("aria-expanded", "true");
+
+      // On desktop the menu is usually already open from hover. Closing it on
+      // that click is what made the links feel like they vanished — so only
+      // toggle shut if this same click opened it in the first place.
+      if (item.classList.contains("open") && (!isDesktop() || item._via === "click")) {
+        clearTimeout(item._t);
+        setOpen(item, false);
+      } else {
+        open("click");
       }
     });
 
-    // hover-open on desktop only
+    // keep it open while the pointer is anywhere over the item OR the panel
     item.addEventListener("mouseenter", function () {
-      if (window.innerWidth <= 940) return;
-      items.forEach(function (o) { o.classList.remove("open"); });
-      item.classList.add("open");
-      btn.setAttribute("aria-expanded", "true");
+      if (!isDesktop()) return;
+      clearTimeout(item._t);
+      if (!item.classList.contains("open")) open("hover");
     });
+
     item.addEventListener("mouseleave", function () {
-      if (window.innerWidth <= 940) return;
-      item.classList.remove("open");
-      btn.setAttribute("aria-expanded", "false");
+      if (!isDesktop()) return;
+      scheduleClose();
+    });
+
+    // keyboard: close once focus leaves the item entirely
+    item.addEventListener("focusout", function (e) {
+      if (item.contains(e.relatedTarget)) return;
+      setOpen(item, false);
     });
   });
 
   document.addEventListener("click", function (e) {
     if (nav && nav.contains(e.target)) return;
-    items.forEach(function (o) {
-      o.classList.remove("open");
-      var b = o.querySelector(".nav-link[aria-haspopup]");
-      if (b) b.setAttribute("aria-expanded", "false");
-    });
+    closeAll();
   });
 
   document.addEventListener("keydown", function (e) {
     if (e.key !== "Escape") return;
-    items.forEach(function (o) { o.classList.remove("open"); });
+    var openItem = items.filter(function (o) { return o.classList.contains("open"); })[0];
+    closeAll();
+    if (openItem) {
+      var b = openItem.querySelector(".nav-link[aria-haspopup]");
+      if (b) b.focus();
+      return;
+    }
     if (nav && nav.classList.contains("open")) {
       nav.classList.remove("open");
       if (toggle) toggle.setAttribute("aria-expanded", "false");
