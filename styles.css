@@ -331,8 +331,23 @@ section { position: relative; }
   display: none; z-index: 70;
 }
 .nav-item.open .dropdown { display: block; }
-.dropdown a { display: block; padding: 0.65rem 0.85rem; border-radius: var(--r-sm); font-size: 0.92rem; font-weight: 700; color: var(--ink); }
-.dropdown a:hover { background: var(--sky); color: var(--teal-deep); }
+
+/* Invisible bridge across the 10px gap between the button and the panel.
+   Without it the pointer leaves .nav-item on the way down and the menu shuts. */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  top: -14px; left: 0; right: 0; height: 16px;
+}
+
+.dropdown a {
+  display: block;
+  padding: 0.7rem 0.85rem;
+  border-radius: var(--r-sm);
+  font-size: 0.92rem; font-weight: 700; color: var(--ink);
+  transition: background 130ms ease, color 130ms ease;
+}
+.dropdown a:hover, .dropdown a:focus-visible { background: var(--sky); color: var(--teal-deep); outline: none; }
 .dropdown small { display: block; font-weight: 500; font-size: 0.77rem; color: var(--muted); margin-top: 1px; }
 
 .menu-toggle {
